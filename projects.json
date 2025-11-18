@@ -1,0 +1,143 @@
+[
+  {
+    "name": "ZEROTOPLAN — PRODUCCIÓN",
+    "image": "zerotoplan.webp",
+    "status": "actualizado",
+    "prod": "https://zerotoplan.com",
+    "local": "http://localhost/new_zerotoplan",
+    "links": [
+      {
+        "label": "Panel de control",
+        "prod": "https://zerotoplan.com/dashboard",
+        "local": "http://localhost:5175/dashboard"
+      }
+    ]
+  },
+  {
+    "name": "ZEROTOPLAN — PREV",
+    "image": "zerotoplan.webp",
+    "status": "actualizado",
+    "prod": "https://prev.zerotoplan.com",
+    "local": "http://localhost/new_zerotoplan",
+    "links": [
+      {
+        "label": "Panel de control",
+        "prod": "https://zerotoplan.com/dashboard",
+        "local": "http://localhost:5175/dashboard"
+      }
+    ]
+  },
+  {
+    "name": "ATEX — PRODUCCIÓN",
+    "image": "Atex.webp",
+    "status": "actualizado",
+    "prod": "https://atexgrp.com",
+    "local": "http://localhost/new_atex",
+    "links": [
+      {
+        "label": "Dashboard",
+        "prod": "https://atexgrp.com/dashboard",
+        "local": "http://localhost:5173/dashboard"
+      }
+    ]
+  },
+  {
+    "name": "ATEX — PREV",
+    "image": "Atex.webp",
+    "status": "actualizado",
+    "prod": "https://prevatex.zerotoplan.com",
+    "local": "http://localhost/new_atex",
+    "links": [
+      {
+        "label": "Dashboard",
+        "prod": "https://atexgrp.com/dashboard",
+        "local": "http://localhost:5173/dashboard"
+      }
+    ]
+  },
+  {
+    "name": "MARSTON — PRODUCCIÓN",
+    "image": "marston.webp",
+    "status": "actualizado",
+    "prod": "http://mar-ston.com",
+    "local": "http://localhost/MARSTON",
+    "links": [
+      {
+        "label": "Landing",
+        "prod": "http://mar-ston.com/landing",
+        "local": "http://localhost:5174/landing"
+      }
+    ]
+  },
+  {
+    "name": "MARSTON — PREV",
+    "image": "marston.webp",
+    "status": "actualizado",
+    "prod": "http://prevmarston.zerotoplan.com",
+    "local": "http://localhost/MARSTON",
+    "links": [
+      {
+        "label": "Landing",
+        "prod": "http://mar-ston.com/landing",
+        "local": "http://localhost:5174/landing"
+      }
+    ]
+  },
+  {
+    "name": "MARSTON.ORG — PRODUCCION",
+    "image": "marston_f.jpg",
+    "status": "actualizado",
+    "prod": "http://mar-ston.org",
+    "local": "http://localhost/MARSTON",
+    "links": [
+      {
+        "label": "Landing",
+        "prod": "http://mar-ston.com/landing",
+        "local": "http://localhost:5174/landing"
+      }
+    ]
+  },
+  {
+    "name": "GME ALLIANCE — PRODUCCION",
+    "image": "gmealliance.png",
+    "status": "actualizado",
+    "prod": "http://gmealliance.com",
+    "local": "http://localhost/gmealliance",
+    "links": [
+      {
+        "label": "Landing",
+        "prod": "http://mar-ston.com/landing",
+        "local": "http://localhost:5174/landing"
+      }
+    ]
+  },
+  {
+    "name": "LAND BUSTERS — PRODUCCION",
+    "image": "",
+    "status": "actualizado",
+    "prod": "http://landbuster.zerotoplan.com",
+    "local": "http://localhost/landbusters",
+    "links": [
+      {
+        "label": "Landing",
+        "prod": "http://mar-ston.com/landing",
+        "local": "http://localhost:5174/landing"
+      }
+    ]
+  },
+  {
+    "name": "VINE ON 19 — PRODUCCION",
+    "image": "vine2.png",
+    "status": "actualizado",
+    "prod": "http://vineon19.com",
+    "local": "http://localhost/vineon19",
+    "links": [
+      {
+        "label": "Landing",
+        "prod": "http://mar-ston.com/landing",
+        "local": "http://localhost:5174/landing"
+      }
+    ]
+  }
+  
+]
