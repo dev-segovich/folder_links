@@ -10,6 +10,21 @@
 				"label": "Panel de control",
 				"prod": "https://zerotoplan.com/dashboard",
 				"local": "http://localhost:5175/dashboard"
+			},
+			{
+				"label": "Formulario Land Acquisition Intake",
+				"prod": "https://zerotoplan.com/land_form.html",
+				"local": "http://localhost:5175/land_form.html"
+			},
+			{
+				"label": "Formulario Land Intake",
+				"prod": "https://zerotoplan.com/client_form.html",
+				"local": "http://localhost:5175/client_form.html"
+			},
+			{
+				"label": "Formulario de contacto",
+				"prod": "https://zerotoplan.com/index.html#pricing",
+				"local": "http://localhost:5175/index.html#pricing"
 			}
 		]
 	},
@@ -24,6 +39,21 @@
 				"label": "Panel de control",
 				"prod": "https://zerotoplan.com/dashboard",
 				"local": "http://localhost:5175/dashboard"
+			},
+			{
+				"label": "Formulario Land Acquisition Intake",
+				"prod": "https://prev.zerotoplan.com/land_form.html",
+				"local": "http://localhost:5175/land_form.html"
+			},
+			{
+				"label": "Formulario Land Intake",
+				"prod": "https://prev.zerotoplan.com/client_form.html",
+				"local": "http://localhost:5175/client_form.html"
+			},
+			{
+				"label": "Formulario de contacto",
+				"prod": "https://prev.zerotoplan.com/index.html#pricing",
+				"local": "http://localhost:5175/index.html#pricing"
 			}
 		]
 	},
@@ -38,6 +68,11 @@
 				"label": "Dashboard",
 				"prod": "https://atexgrp.com/dashboard",
 				"local": "http://localhost:5173/dashboard"
+			},
+			{
+				"label": "Formulario de contacto",
+				"prod": "https://atexgrp.com/contact",
+				"local": "http://localhost:5175/contact"
 			}
 		]
 	},
@@ -52,6 +87,11 @@
 				"label": "Dashboard",
 				"prod": "https://atexgrp.com/dashboard",
 				"local": "http://localhost:5173/dashboard"
+			},
+			{
+				"label": "Formulario de contacto",
+				"prod": "https://prevatex.zerotoplan.com/contact",
+				"local": "http://localhost:5175/contact"
 			}
 		]
 	},
@@ -66,6 +106,11 @@
 				"label": "Landing",
 				"prod": "http://mar-ston.com/landing",
 				"local": "http://localhost:5174/landing"
+			},
+			{
+				"label": "Formulario de contacto",
+				"prod": "https://mar-ston.com/form.html",
+				"local": "http://localhost:5175/form.html"
 			}
 		]
 	},
@@ -80,6 +125,11 @@
 				"label": "Landing",
 				"prod": "http://mar-ston.com/landing",
 				"local": "http://localhost:5174/landing"
+			},
+			{
+				"label": "Formulario de contacto",
+				"prod": "https://prevmarston.zerotoplan.com/form.html",
+				"local": "http://localhost:5175/form.html"
 			}
 		]
 	},
