@@ -12,17 +12,17 @@
 				"local": "http://localhost:5175/dashboard"
 			},
 			{
-				"label": "Formulario Land Acquisition Intake",
+				"label": "Land Form",
 				"prod": "https://zerotoplan.com/land_form.html",
 				"local": "http://localhost:5175/land_form.html"
 			},
 			{
-				"label": "Formulario Land Intake",
+				"label": "Client Form",
 				"prod": "https://zerotoplan.com/client_form.html",
 				"local": "http://localhost:5175/client_form.html"
 			},
 			{
-				"label": "Formulario de contacto",
+				"label": "Contact Form",
 				"prod": "https://zerotoplan.com/index.html#pricing",
 				"local": "http://localhost:5175/index.html#pricing"
 			}
@@ -41,17 +41,17 @@
 				"local": "http://localhost:5175/dashboard"
 			},
 			{
-				"label": "Formulario Land Acquisition Intake",
+				"label": "Land Form",
 				"prod": "https://prev.zerotoplan.com/land_form.html",
 				"local": "http://localhost:5175/land_form.html"
 			},
 			{
-				"label": "Formulario Land Intake",
+				"label": "Client Form",
 				"prod": "https://prev.zerotoplan.com/client_form.html",
 				"local": "http://localhost:5175/client_form.html"
 			},
 			{
-				"label": "Formulario de contacto",
+				"label": "Contact Form",
 				"prod": "https://prev.zerotoplan.com/index.html#pricing",
 				"local": "http://localhost:5175/index.html#pricing"
 			}
@@ -70,7 +70,7 @@
 				"local": "http://localhost:5173/dashboard"
 			},
 			{
-				"label": "Formulario de contacto",
+				"label": "Contact Form",
 				"prod": "https://atexgrp.com/contact",
 				"local": "http://localhost:5175/contact"
 			}
@@ -89,7 +89,7 @@
 				"local": "http://localhost:5173/dashboard"
 			},
 			{
-				"label": "Formulario de contacto",
+				"label": "Contact Form",
 				"prod": "https://prevatex.zerotoplan.com/contact",
 				"local": "http://localhost:5175/contact"
 			}
@@ -108,7 +108,7 @@
 				"local": "http://localhost:5174/landing"
 			},
 			{
-				"label": "Formulario de contacto",
+				"label": "Contact Form",
 				"prod": "https://mar-ston.com/form.html",
 				"local": "http://localhost:5175/form.html"
 			}
@@ -127,7 +127,7 @@
 				"local": "http://localhost:5174/landing"
 			},
 			{
-				"label": "Formulario de contacto",
+				"label": "Contact Form",
 				"prod": "https://prevmarston.zerotoplan.com/form.html",
 				"local": "http://localhost:5175/form.html"
 			}
