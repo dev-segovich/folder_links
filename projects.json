@@ -25,6 +25,21 @@
 				"label": "Contact Form",
 				"prod": "https://zerotoplan.com/index.html#pricing",
 				"local": "http://localhost:5175/index.html#pricing"
+			},
+			{
+				"label": "Broker Criteria",
+				"prod": "https://zerotoplan.com/broker-criteria.html",
+				"local": "http://localhost:5175/broker-criteria.html"
+			},
+			{
+				"label": "Broker Partnership",
+				"prod": "https://zerotoplan.com/broker-partnership.html",
+				"local": "http://localhost:5175/broker-partnership.html"
+			},
+			{
+				"label": "Broker Referental Program",
+				"prod": "https://zerotoplan.com/broker-referental-program.html",
+				"local": "http://localhost:5175/broker-referental-program.html"
 			}
 		]
 	},
@@ -54,6 +69,21 @@
 				"label": "Contact Form",
 				"prod": "https://prev.zerotoplan.com/index.html#pricing",
 				"local": "http://localhost:5175/index.html#pricing"
+			},
+			{
+				"label": "Broker Criteria",
+				"prod": "https://prev.zerotoplan.com/broker-criteria.html",
+				"local": "http://localhost:5175/broker-criteria.html"
+			},
+			{
+				"label": "Broker Partnership",
+				"prod": "https://prev.zerotoplan.com/broker-partnership.html",
+				"local": "http://localhost:5175/broker-partnership.html"
+			},
+			{
+				"label": "Broker Referental Program",
+				"prod": "https://prev.zerotoplan.com/broker-referental-program.html",
+				"local": "http://localhost:5175/broker-referental-program.html"
 			}
 		]
 	},
