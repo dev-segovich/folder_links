@@ -13,38 +13,53 @@ function renderProjects(projects) {
   const container = document.querySelector(".projects-grid");
 
   projects.forEach((p) => {
-    const linksHTML = p.links
+    const validLinks = (p.links || []).filter((l) => l && l.label);
+    const hasLinks = validLinks.length > 0;
+
+    const linksHTML = validLinks
       .map(
         (l) => `
         <div class="sub-link">
           <span>${l.label}</span>
-          <a 
-            data-prod="${l.prod}" 
-            data-local="${l.local}" 
+          <a
+            data-prod="${l.prod}"
+            data-local="${l.local}"
             target="_blank"
           >Abrir</a>
         </div>`
       )
       .join("");
 
+    const env = p.env || "";
+    const envLabel = env === "prod" ? "PROD" : env === "qa" ? "QA" : "";
+    const envBadge = env
+      ? `<span class="env-badge env-${env}"><span class="env-dot"></span>${envLabel}</span>`
+      : "";
+
+    const logo = p.image
+      ? `<img src="${p.image}" alt="${p.name}" />`
+      : `<div class="logo-placeholder">${initials(p.name)}</div>`;
+
     container.insertAdjacentHTML(
       "beforeend",
       `
-      <div class="accordion">
+      <div class="accordion env-${env || "neutral"}${hasLinks ? "" : " no-links"}">
         <div class="accordion-header">
-          <img src="${p.image}" alt="${p.name}" />
+          <div class="logo">${logo}</div>
           <div class="info">
-            <h3>${p.name}</h3>
-            <span class="status ${p.status}">${capitalize(p.status)}</span>
+            <h3>${displayName(p.name)}</h3>
+            ${envBadge}
           </div>
-          <button 
+          ${hasLinks ? '<span class="arrow">▼</span>' : ""}
+        </div>
+        <div class="card-actions">
+          <button
             class="main-button"
             data-prod="${p.prod}"
             data-local="${p.local}"
           >
-            Ir al sitio
+            Visitar sitio <span class="btn-arrow">↗</span>
           </button>
-          <span class="arrow">▼</span>
         </div>
         <div class="accordion-content">
           ${linksHTML}
@@ -53,6 +68,23 @@ function renderProjects(projects) {
       `
     );
   });
+}
+
+// === NOMBRE LIMPIO (sin sufijo de entorno, ya lo muestra el badge) ===
+function displayName(name) {
+  return name.replace(/\s*[—–-]\s*(QA|PROD[A-ZÁÉÍÓÚÑa-záéíóúñ]*)\s*$/i, "").trim();
+}
+
+// === INICIALES PARA LOGO PLACEHOLDER ===
+function initials(name) {
+  return name
+    .replace(/[—-].*$/, "") // quitar sufijo de entorno
+    .trim()
+    .split(/\s+/)
+    .slice(0, 2)
+    .map((w) => w.charAt(0))
+    .join("")
+    .toUpperCase();
 }
 
 // === ACORDEONES ===
@@ -105,9 +137,4 @@ function updateLinks(isLocal) {
     const url = isLocal ? a.dataset.local : a.dataset.prod;
     a.setAttribute("href", url);
   });
-}
-
-// === UTILIDAD: CAPITALIZAR ===
-function capitalize(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
 }

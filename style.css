@@ -1,100 +1,216 @@
 /* === ESTILOS ORIGINALES === */
 body {
   font-family: "Poppins", sans-serif;
-  background: #f5f7fa;
+  background: linear-gradient(135deg, #3a4453 0%, #2b333f 100%);
+  background-attachment: fixed;
   color: #333;
   margin: 0;
   padding: 20px;
+  min-height: 100vh;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
 /* === GRILLA DE PROYECTOS === */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr));
   gap: 16px;
   align-items: start;
 }
 
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+/* Empuja el switch al extremo derecho */
+.page-header .env-switch {
+  margin-left: auto;
+  margin-bottom: 0;
+}
+
+.brand-logo {
+  display: inline-flex;
+  transition: transform 0.2s ease;
+}
+
+.brand-logo:hover {
+  transform: scale(1.05);
+}
+
+.brand-logo img {
+  height: 56px;
+  width: auto;
+  display: block;
+}
+
 h1 {
+  flex: 1;
   text-align: center;
-  margin-bottom: 30px;
-  color: #222;
+  margin: 0;
+  color: #f8fafc;
+  letter-spacing: 0.5px;
 }
 
 .accordion {
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.1);
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 5px solid transparent;
+}
+
+.accordion:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.15);
+}
+
+/* Acento lateral por entorno */
+.accordion.env-prod {
+  border-left-color: #16a34a;
+}
+
+.accordion.env-qa {
+  border-left-color: #f59e0b;
+}
+
+/* Badge de entorno (PROD / QA) */
+.env-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 11px;
+  border-radius: 999px;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+}
+
+.env-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.env-badge.env-prod {
+  background: linear-gradient(135deg, #22c55e 0%, #15803d 100%);
+}
+
+.env-badge.env-qa {
+  background: linear-gradient(135deg, #fbbf24 0%, #ea580c 100%);
 }
 
 .accordion-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 15px 20px;
+  gap: 14px;
+  padding: 16px 18px 12px;
   cursor: pointer;
   background: #fff;
 }
 
-.accordion-header:hover {
-  background: #f0f0f0;
+.accordion.no-links .accordion-header {
+  cursor: default;
 }
 
-.accordion-header img {
-  width: 80px;
-  height: 80px;
-  border-radius: 6px;
+.accordion-header .logo {
+  width: 110px;
+  height: 110px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordion-header .logo img {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  margin-right: 15px;
+}
+
+.logo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  font-weight: 700;
+  font-size: 30px;
+  color: #64748b;
 }
 
 .accordion-header .info {
   flex: 1;
+  min-width: 0;
 }
 
 .accordion-header .info h3 {
   margin: 0;
   font-size: 16px;
-}
-
-.status {
-  font-size: 13px;
   font-weight: 600;
+  color: #1e293b;
+  line-height: 1.3;
 }
 
-.status.actualizado {
-  color: #16a34a;
-}
-
-.status.proceso {
-  color: #d97706;
+/* Fila de acción con el botón principal */
+.card-actions {
+  padding: 0 18px 16px;
 }
 
 .main-button {
-  background: #2563eb;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #3a4453 0%, #2b333f 100%);
   color: #fff;
   border: none;
-  padding: 8px 14px;
-  border-radius: 6px;
+  padding: 11px 14px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 13px;
-  transition: background 0.2s;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 6px rgba(43, 51, 63, 0.25);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
 }
 
 .main-button:hover {
-  background: #1d4ed8;
+  background: linear-gradient(135deg, #454f60 0%, #353d4a 100%);
+  box-shadow: 0 4px 12px rgba(43, 51, 63, 0.35);
+}
+
+.main-button:active {
+  transform: translateY(1px);
+}
+
+.btn-arrow {
+  font-size: 15px;
+  line-height: 1;
 }
 
 .arrow {
   transition: transform 0.3s;
-  margin-left: 10px;
+  margin-left: 4px;
+  color: #94a3b8;
+  font-size: 12px;
 }
 
 .accordion.active .arrow {
@@ -158,6 +274,7 @@ h1 {
   gap: 10px;
   margin-bottom: 25px;
   font-weight: 600;
+  color: #e2e8f0;
 }
 
 .switch {

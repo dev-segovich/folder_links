@@ -8,16 +8,21 @@
 </head>
 <body>
   <div class="container">
-    <h1>Directorio de Proyectos</h1>
+    <header class="page-header">
+      <a class="brand-logo" href="https://folderlinks.zerotoplan.com/" target="_blank" rel="noopener">
+        <img src="FolderLinks.png" alt="FolderLinks" />
+      </a>
+      <h1>Directorio de Proyectos</h1>
 
-    <!-- 🔄 Switch de entorno -->
-    <div class="env-switch">
-      <label class="switch">
-        <input type="checkbox" id="envToggle" />
-        <span class="slider"></span>
-      </label>
-      <span id="envLabel">Producción</span>
-    </div>
+      <!-- 🔄 Switch de entorno -->
+      <div class="env-switch">
+        <label class="switch">
+          <input type="checkbox" id="envToggle" />
+          <span class="slider"></span>
+        </label>
+        <span id="envLabel">Producción</span>
+      </div>
+    </header>
 
     <!-- 🧩 Los acordeones se generarán dinámicamente aquí -->
     <div class="projects-grid"></div>
