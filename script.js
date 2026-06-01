@@ -10,7 +10,7 @@ fetch("projects.json")
 
 // === FUNCIÓN PARA RENDERIZAR LOS PROYECTOS ===
 function renderProjects(projects) {
-  const container = document.querySelector(".container");
+  const container = document.querySelector(".projects-grid");
 
   projects.forEach((p) => {
     const linksHTML = p.links

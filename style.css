@@ -8,8 +8,16 @@ body {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+/* === GRILLA DE PROYECTOS === */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+  align-items: start;
 }
 
 h1 {
@@ -22,7 +30,6 @@ h1 {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
-  margin-bottom: 12px;
   overflow: hidden;
   transition: all 0.3s ease;
 }

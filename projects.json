@@ -243,7 +243,7 @@
 	},
 	{
 		"name": "ROMA",
-		"image": "roma.png",
+		"image": "roma.svg",
 		"status": "actualizado",
 		"prod": "https://roma.zerotoplan.com",
 		"local": "",
