@@ -215,6 +215,21 @@
 		]
 	},
 	{
+		"name": "GME ALLIANCE — PREV",
+		"env": "qa",
+		"image": "gmealliance.png",
+		"status": "actualizado",
+		"prod": "http://prevgmealliance.zerotoplan.com",
+		"local": "http://localhost/gmealliance",
+		"links": [
+			{
+				"label": "Landing",
+				"prod": "http://mar-ston.com/landing",
+				"local": "http://localhost:5174/landing"
+			}
+		]
+	},
+	{
 		"name": "LAND BUSTERS — PRODUCCION",
 		"env": "prod",
 		"image": "",
