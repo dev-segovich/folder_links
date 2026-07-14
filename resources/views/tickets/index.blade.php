@@ -24,10 +24,11 @@
             ['name' => 'status', 'type' => 'select', 'label' => 'Estado', 'options' => ['' => 'Todos los estados', 'backlog' => 'Backlog', 'en_progreso' => 'En Progreso', 'en_revision' => 'En Revisión', 'done' => 'Done'], 'value' => request('status')],
             ['name' => 'priority', 'type' => 'select', 'label' => 'Prioridad', 'options' => ['' => 'Todas las prioridades', 'baja' => 'Baja', 'media' => 'Media', 'alta' => 'Alta', 'critica' => 'Crítica'], 'value' => request('priority')],
             ['name' => 'sort', 'type' => 'select', 'label' => 'Orden', 'options' => ['created_desc' => 'Más reciente', 'created_asc' => 'Más antiguo', 'deadline' => 'Deadline', 'priority' => 'Prioridad'], 'value' => request('sort')],
+            ['name' => 'filter_by', 'type' => 'select', 'label' => 'Filtrar por', 'options' => ['' => 'Todos', 'assigned_to_me' => 'Asignados a mí', 'completed' => 'Completados'], 'value' => request('filter_by')],
         ],
         'buttons' => [
             ['type' => 'submit', 'text' => 'Filtrar', 'class' => 'btn btn-primary'],
-            ...(request()->anyFilled(['search', 'project', 'status', 'priority', 'sort'])) ? [['type' => 'link', 'text' => 'Limpiar', 'href' => route('tickets.index'), 'class' => 'btn btn-secondary']] : [],
+            ...(request()->anyFilled(['search', 'project', 'status', 'priority', 'sort', 'filter_by'])) ? [['type' => 'link', 'text' => 'Limpiar', 'href' => route('tickets.index'), 'class' => 'btn btn-secondary']] : [],
         ]
     ])
 

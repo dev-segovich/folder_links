@@ -7,9 +7,9 @@ if (! function_exists('acting_user')) {
     /**
      * The user actions are attributed to.
      *
-     * Logged in  -> the authenticated user (the dev, "Jesús Blondell").
-     * Guest      -> the default boss ("jefe") user, so browsing without
-     *               login behaves as the jefe.
+     * Logged in  -> the authenticated user (the dev, "Jesús").
+     * Guest      -> the default user ("Rey"), so browsing without login
+     *               behaves as Rey (only sees visible items).
      */
     function acting_user(): ?User
     {
@@ -17,7 +17,8 @@ if (! function_exists('acting_user')) {
             return Auth::user();
         }
 
-        return null;
+        // Return the default "Rey" user for guests
+        return User::where('role', 'dev')->first();
     }
 }
 

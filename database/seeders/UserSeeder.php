@@ -20,6 +20,26 @@ class UserSeeder extends Seeder
             ]
         );
 
+        User::firstOrCreate(
+            ['username' => 'mcoello'],
+            [
+                'name' => 'Miguel Ángel',
+                'email' => 'miguel@kernel.local',
+                'password' => Hash::make('Mecos0500'),
+                'role' => 'dev',
+            ]
+        );
+
+        User::firstOrCreate(
+            ['username' => 'jlozano'],
+            [
+                'name' => 'José',
+                'email' => 'josé@kernel.local',
+                'password' => Hash::make('Mecos0500'),
+                'role' => 'dev',
+            ]
+        );
+
         $this->command->info('Default users created.');
     }
 }

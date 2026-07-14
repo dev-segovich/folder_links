@@ -52,6 +52,17 @@ class TicketsController extends Controller
             }
         }
 
+        if ($request->filled('filter_by')) {
+            switch ($request->filter_by) {
+                case 'assigned_to_me':
+                    $query->where('assigned_to', acting_user()->id);
+                    break;
+                case 'completed':
+                    $query->where('status', 'done');
+                    break;
+            }
+        }
+
         $tickets = $query->paginate(20);
 
         $projects = Project::query()
@@ -86,6 +97,7 @@ class TicketsController extends Controller
 
         $ticket = Ticket::create(array_merge($validated, [
             'created_by' => acting_user()->id,
+            'assigned_to' => acting_user()->id,
             'status' => 'backlog',
             // Only the logged-in dev may hide a ticket from the jefe.
             'visible_from_boss' => can_see_hidden() ? ($validated['visible_from_boss'] ?? false) : true,

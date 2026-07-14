@@ -27,6 +27,18 @@ class AuditLog extends Model
         ];
     }
 
+    /**
+     * With $timestamps = false, nothing app-side filled `created_at`, so MySQL was
+     * defaulting it to CURRENT_TIMESTAMP — the database server's clock, which drifts
+     * from the app's timezone. Stamp it here so the audit trail shares one clock.
+     */
+    protected static function booted(): void
+    {
+        static::creating(function (AuditLog $log) {
+            $log->created_at ??= now();
+        });
+    }
+
     public function ticket(): BelongsTo
     {
         return $this->belongsTo(Ticket::class);

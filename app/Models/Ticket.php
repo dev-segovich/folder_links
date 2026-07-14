@@ -30,7 +30,28 @@ class Ticket extends Model
             'visible_from_boss' => 'boolean',
             'created_at' => 'datetime',
             'updated_at' => 'datetime',
+            'assigned_at' => 'datetime',
+            'completed_at' => 'datetime',
         ];
+    }
+
+    /**
+     * `assigned_at` and `completed_at` are derived from transitions rather than
+     * user input (they are deliberately not fillable), and both the web and API
+     * controllers can trigger those transitions — so they are stamped here, once,
+     * instead of at every mutation site.
+     */
+    protected static function booted(): void
+    {
+        static::saving(function (Ticket $ticket) {
+            if ($ticket->isDirty('status')) {
+                $ticket->completed_at = $ticket->status === 'done' ? now() : null;
+            }
+
+            if ($ticket->isDirty('assigned_to')) {
+                $ticket->assigned_at = $ticket->assigned_to ? now() : null;
+            }
+        });
     }
 
     public function project(): BelongsTo

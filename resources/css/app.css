@@ -225,6 +225,84 @@
         color: var(--color-danger-ink);
     }
 
+    /* Heatmap (dashboard) ------------------------------------ */
+    .heatmap {
+        --heat: var(--color-success);
+    }
+    .heatmap[data-metric='assigned'] {
+        --heat: var(--color-brand);
+    }
+
+    .heatmap-cell {
+        width: 0.75rem;
+        height: 0.75rem;
+        flex-shrink: 0;
+        border-radius: 2px;
+        background-color: color-mix(in oklab, var(--color-line) 45%, transparent);
+        transition: background-color 0.15s ease, outline-color 0.15s ease;
+        outline: 1px solid transparent;
+        outline-offset: 0;
+    }
+    .heatmap-cell[data-level='1'] {
+        background-color: color-mix(in oklab, var(--heat) 28%, var(--color-surface));
+    }
+    .heatmap-cell[data-level='2'] {
+        background-color: color-mix(in oklab, var(--heat) 50%, var(--color-surface));
+    }
+    .heatmap-cell[data-level='3'] {
+        background-color: color-mix(in oklab, var(--heat) 75%, var(--color-surface));
+    }
+    .heatmap-cell[data-level='4'] {
+        background-color: var(--heat);
+    }
+    .heatmap-cell[data-date]:hover {
+        outline-color: var(--color-ink);
+    }
+    /* Días fuera del rango (relleno de la última semana) */
+    .heatmap-cell-blank {
+        background-color: transparent;
+    }
+
+    .heatmap-tabs {
+        display: inline-flex;
+        gap: 0.25rem;
+        padding: 0.25rem;
+        background-color: var(--color-bg);
+        border: 1px solid var(--color-line);
+        border-radius: 0.5rem;
+    }
+    .heatmap-tab {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.375rem;
+        padding: 0.3rem 0.7rem;
+        border-radius: 0.375rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--color-faint);
+        cursor: pointer;
+        transition: background-color 0.15s ease, color 0.15s ease;
+    }
+    .heatmap-tab::before {
+        content: '';
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 2px;
+        background-color: currentColor;
+        opacity: 0.5;
+    }
+    .heatmap-tab:hover {
+        color: var(--color-ink);
+    }
+    .heatmap-tab[aria-pressed='true'] {
+        background-color: var(--color-surface-2);
+        color: var(--color-ink);
+    }
+    .heatmap-tab[aria-pressed='true']::before {
+        background-color: var(--heat);
+        opacity: 1;
+    }
+
     /* Section headings -------------------------------------- */
     .eyebrow {
         font-size: 0.6875rem;

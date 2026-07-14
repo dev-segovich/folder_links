@@ -44,6 +44,7 @@ php artisan tinker
 - **Ticket priority**: `baja`, `media`, `alta`, `critica`.
 - Enum *values are Spanish* and appear in DB, validation rules, and `orderByRaw` sorts — keep them consistent when adding filters.
 - `Ticket::getProgressAttribute()` computes subtask completion %.
+- **Activity timestamps**: `tickets.completed_at` / `assigned_at` are derived, not user input — they are **not fillable** and are stamped in `Ticket::booted()` (a `saving` hook) whenever `status` crosses into/out of `done` or `assigned_to` changes. That hook is the single place both the web and API controllers rely on; don't set these columns by hand. The dashboard heatmap buckets by them.
 
 ### Roles & visibility (the core cross-cutting concern)
 Two roles only: `dev` and `boss` (`User::isDev()` / `isBoss()`; `role` column). Auth is hand-rolled session auth (`LoginController`), **not** Breeze/Jetstream. The `role` middleware alias maps to `App\Http\Middleware\CheckRole` (registered in `bootstrap/app.php`), though routes currently gate only on `auth`/`guest`.
@@ -62,7 +63,7 @@ When adding any list/detail endpoint, replicate this filtering or you will leak 
 All routes are in `routes/web.php` (no API). Mutations redirect back to `tickets.show` (classic PRG, no JSON/AJAX).
 
 ### Audit logging
-`AuditLog` entries are written **manually** inside controller actions (status change, priority change, subtask/comment/file create & delete). There is no observer or trait — if you add a mutating action that should be tracked, write the `AuditLog::create([...])` call yourself. `AuditLog` has `$timestamps = false` and uses only `created_at`.
+`AuditLog` entries are written **manually** inside controller actions (status change, priority change, subtask/comment/file create & delete). There is no observer or trait — if you add a mutating action that should be tracked, write the `AuditLog::create([...])` call yourself. `AuditLog` has `$timestamps = false` and uses only `created_at`; because of that, MySQL used to default the column to its own `CURRENT_TIMESTAMP` (the DB server's clock, which drifts from the app's UTC), so `AuditLog::booted()` now stamps `created_at = now()` on create. Assignment changes are still **not** audited.
 
 ### File uploads
 Ticket attachments go to the `public` disk under `tickets/{ticket_id}` (`Storage::disk('public')`). Download/delete routes look up the `TicketFile` by its stored `path`, and delete is restricted to the uploader. Run `php artisan storage:link` for public access.

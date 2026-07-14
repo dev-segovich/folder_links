@@ -72,12 +72,16 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
             <div>
                 <label for="assigned_to" class="label">Asignado a</label>
-                <select id="assigned_to" name="assigned_to" class="field cursor-pointer">
-                    <option value="">Sin asignar</option>
-                    @foreach(\App\Models\User::all() as $user)
-                        <option value="{{ $user->id }}" {{ old('assigned_to', $ticket->assigned_to ?? '') == $user->id ? 'selected' : '' }}>{{ $user->name }} ({{ $user->role }})</option>
-                    @endforeach
-                </select>
+                @if(can_see_hidden())
+                    <select id="assigned_to" name="assigned_to" class="field cursor-pointer">
+                        @foreach(\App\Models\User::where('role', 'dev')->get() as $user)
+                            <option value="{{ $user->id }}" {{ old('assigned_to', $ticket->assigned_to ?? '') == $user->id ? 'selected' : '' }}>{{ $user->name }}</option>
+                        @endforeach
+                    </select>
+                @else
+                    <input type="hidden" id="assigned_to" name="assigned_to" value="{{ \App\Models\User::where('role', 'dev')->first()->id }}">
+                    <div class="field pointer-events-none bg-surface-2/50">{{ \App\Models\User::where('role', 'dev')->first()->name }}</div>
+                @endif
             </div>
             <div>
                 <label for="deadline" class="label">Deadline</label>
