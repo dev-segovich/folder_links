@@ -1,0 +1,370 @@
+[
+	{
+		"name": "ZEROTOPLAN — PRODUCCIÓN",
+		"env": "prod",
+		"image": "zerotoplan.webp",
+		"status": "actualizado",
+		"prod": "https://zerotoplan.com",
+		"local": "http://localhost/new_zerotoplan",
+		"links": [
+			{
+				"label": "Panel de control",
+				"prod": "https://zerotoplan.com/dashboard",
+				"local": "http://localhost:5175/dashboard"
+			},
+			{
+				"label": "Land Form",
+				"prod": "https://zerotoplan.com/land_form.html",
+				"local": "http://localhost:5175/land_form.html"
+			},
+			{
+				"label": "Client Form",
+				"prod": "https://zerotoplan.com/client_form.html",
+				"local": "http://localhost:5175/client_form.html"
+			},
+			{
+				"label": "Contact Form",
+				"prod": "https://zerotoplan.com/index.html#pricing",
+				"local": "http://localhost:5175/index.html#pricing"
+			},
+			{
+				"label": "Broker Criteria",
+				"prod": "https://zerotoplan.com/broker-criteria.html",
+				"local": "http://localhost:5175/broker-criteria.html"
+			},
+			{
+				"label": "Broker Partnership",
+				"prod": "https://zerotoplan.com/broker-partnership.html",
+				"local": "http://localhost:5175/broker-partnership.html"
+			},
+			{
+				"label": "Broker Referental Program",
+				"prod": "https://zerotoplan.com/broker-referental-program.html",
+				"local": "http://localhost:5175/broker-referental-program.html"
+			}
+		]
+	},
+	{
+		"name": "ZEROTOPLAN — QA",
+		"env": "qa",
+		"image": "zerotoplan.webp",
+		"status": "actualizado",
+		"prod": "https://prev.zerotoplan.com",
+		"local": "http://localhost/new_zerotoplan",
+		"links": [
+			{
+				"label": "Panel de control",
+				"prod": "https://zerotoplan.com/dashboard",
+				"local": "http://localhost:5175/dashboard"
+			},
+			{
+				"label": "Land Form",
+				"prod": "https://prev.zerotoplan.com/land_form.html",
+				"local": "http://localhost:5175/land_form.html"
+			},
+			{
+				"label": "Client Form",
+				"prod": "https://prev.zerotoplan.com/client_form.html",
+				"local": "http://localhost:5175/client_form.html"
+			},
+			{
+				"label": "Contact Form",
+				"prod": "https://prev.zerotoplan.com/index.html#pricing",
+				"local": "http://localhost:5175/index.html#pricing"
+			},
+			{
+				"label": "Broker Criteria",
+				"prod": "https://prev.zerotoplan.com/broker-criteria.html",
+				"local": "http://localhost:5175/broker-criteria.html"
+			},
+			{
+				"label": "Broker Partnership",
+				"prod": "https://prev.zerotoplan.com/broker-partnership.html",
+				"local": "http://localhost:5175/broker-partnership.html"
+			},
+			{
+				"label": "Broker Referental Program",
+				"prod": "https://prev.zerotoplan.com/broker-referental-program.html",
+				"local": "http://localhost:5175/broker-referental-program.html"
+			}
+		]
+	},
+	{
+		"name": "ATEX — PRODUCCIÓN",
+		"env": "prod",
+		"image": "Atex.webp",
+		"status": "actualizado",
+		"prod": "https://atexgrp.com",
+		"local": "http://localhost/new_atex",
+		"links": [
+			{
+				"label": "Dashboard",
+				"prod": "https://atexgrp.com/dashboard",
+				"local": "http://localhost:5173/dashboard"
+			},
+			{
+				"label": "Contact Form",
+				"prod": "https://atexgrp.com/contact",
+				"local": "http://localhost:5175/contact"
+			}
+		]
+	},
+	{
+		"name": "ATEX — QA",
+		"env": "qa",
+		"image": "Atex.webp",
+		"status": "actualizado",
+		"prod": "https://prevatex.zerotoplan.com",
+		"local": "http://localhost/new_atex",
+		"links": [
+			{
+				"label": "Dashboard",
+				"prod": "https://atexgrp.com/dashboard",
+				"local": "http://localhost:5173/dashboard"
+			},
+			{
+				"label": "Contact Form",
+				"prod": "https://prevatex.zerotoplan.com/contact",
+				"local": "http://localhost:5175/contact"
+			}
+		]
+	},
+	{
+		"name": "MARSTON — PRODUCCIÓN",
+		"env": "prod",
+		"image": "marston.webp",
+		"status": "actualizado",
+		"prod": "http://mar-ston.com",
+		"local": "http://localhost/MARSTON",
+		"links": [
+			{
+				"label": "Landing",
+				"prod": "http://mar-ston.com/landing",
+				"local": "http://localhost:5174/landing"
+			},
+			{
+				"label": "Contact Form",
+				"prod": "https://mar-ston.com/form.html",
+				"local": "http://localhost:5175/form.html"
+			}
+		]
+	},
+	{
+		"name": "MARSTON — QA",
+		"env": "qa",
+		"image": "marston.webp",
+		"status": "actualizado",
+		"prod": "http://prevmarston.zerotoplan.com",
+		"local": "http://localhost/MARSTON",
+		"links": [
+			{
+				"label": "Landing",
+				"prod": "http://mar-ston.com/landing",
+				"local": "http://localhost:5174/landing"
+			},
+			{
+				"label": "Contact Form",
+				"prod": "https://prevmarston.zerotoplan.com/form.html",
+				"local": "http://localhost:5175/form.html"
+			}
+		]
+	},
+	{
+		"name": "MARSTON.ORG — PRODUCCION",
+		"env": "prod",
+		"image": "marston_f.jpg",
+		"status": "actualizado",
+		"prod": "http://mar-ston.org",
+		"local": "http://localhost/MARSTON",
+		"links": [
+			{
+				"label": "Landing",
+				"prod": "http://mar-ston.com/landing",
+				"local": "http://localhost:5174/landing"
+			}
+		]
+	},
+	{
+		"name": "MARSTON.ORG — QA",
+		"env": "qa",
+		"image": "marston_f.jpg",
+		"status": "actualizado",
+		"prod": "http://prevmarstonorg.zerotoplan.com/",
+		"local": "http://localhost/MARSTON",
+		"links": [
+			{
+				"label": "Landing",
+				"prod": "http://prevmarstonorg.zerotoplan.com/landing",
+				"local": "http://localhost:5174/landing"
+			}
+		]
+	},
+	{
+		"name": "GME ALLIANCE — PRODUCCION",
+		"env": "prod",
+		"image": "gmealliance.png",
+		"status": "actualizado",
+		"prod": "http://gmealliance.com",
+		"local": "http://localhost/gmealliance",
+		"links": [
+			{
+				"label": "Landing",
+				"prod": "http://mar-ston.com/landing",
+				"local": "http://localhost:5174/landing"
+			}
+		]
+	},
+	{
+		"name": "GME ALLIANCE — PREV",
+		"env": "qa",
+		"image": "gmealliance.png",
+		"status": "actualizado",
+		"prod": "http://prevgmealliance.zerotoplan.com",
+		"local": "http://localhost/gmealliance",
+		"links": [
+			{
+				"label": "Landing",
+				"prod": "http://mar-ston.com/landing",
+				"local": "http://localhost:5174/landing"
+			}
+		]
+	},
+	{
+		"name": "GREENLINE — PRODUCCIÓN",
+		"env": "prod",
+		"image": "greenline.webp",
+		"status": "actualizado",
+		"prod": "https://greenlinepmc.com/",
+		"local": "",
+		"links": [
+			{
+				"label": "Intake Form",
+				"prod": "https://greenlinepmc.com/apply",
+				"local": ""
+			}
+		]
+	},
+	{
+		"name": "GREENLINE — QA",
+		"env": "qa",
+		"image": "greenline.webp",
+		"status": "actualizado",
+		"prod": "http://prevgreenline.zerotoplan.com/",
+		"local": "",
+		"links": [
+			{
+				"label": "Intake Form",
+				"prod": "http://prevgreenline.zerotoplan.com/apply",
+				"local": ""
+			}
+		]
+	},
+	{
+		"name": "ROMA — PRODUCCIÓN",
+		"env": "prod",
+		"image": "Roma.svg",
+		"status": "actualizado",
+		"prod": "https://rome.zerotoplan.com",
+		"local": "",
+		"links": [
+			{}
+		]
+	},
+	{
+		"name": "ROMA — QA",
+		"env": "qa",
+		"image": "Roma.svg",
+		"status": "actualizado",
+		"prod": "https://qarome.zerotoplan.com",
+		"local": "",
+		"links": [
+			{}
+		]
+	},
+	{
+		"name": "LAND BUSTERS — PRODUCCION",
+		"env": "prod",
+		"image": "",
+		"status": "actualizado",
+		"prod": "http://landbuster.zerotoplan.com",
+		"local": "http://localhost/landbusters",
+		"links": [
+			{
+				"label": "Landing",
+				"prod": "http://mar-ston.com/landing",
+				"local": "http://localhost:5174/landing"
+			}
+		]
+	},
+	{
+		"name": "VINE ON 19 — PRODUCCION",
+		"env": "prod",
+		"image": "vine2.png",
+		"status": "actualizado",
+		"prod": "http://vineon19.com",
+		"local": "http://localhost/vineon19",
+		"links": [
+			{
+				"label": "Landing",
+				"prod": "http://mar-ston.com/landing",
+				"local": "http://localhost:5174/landing"
+			}
+		]
+	},
+	{
+		"name": "ARCONDAL - QA",
+		"env": "qa",
+		"image": "arcondal.png",
+		"status": "actualizado",
+		"prod": "https://prevarcondal.zerotoplan.com",
+		"local": "",
+		"links": [
+			{}
+		]
+	},
+	{
+		"name": "PERSONAL LINKS",
+		"env": "",
+		"image": "Personals.png",
+		"status": "actualizado",
+		"prod": "https://folderlinks.zerotoplan.com/",
+		"local": "",
+		"links": [
+			{
+				"label": "Anthony Links",
+				"prod": "anthonylinks.atexgrp.com",
+				"local": ""
+			},
+			{
+				"label": "Giovanni Links",
+				"prod": "https://giovannilinks.atexgrp.com/",
+				"local": ""
+			},
+			{
+				"label": "Juliana Links",
+				"prod": "julianalinks.atexgrp.com",
+				"local": ""
+			},
+			{
+				"label": "Ray Links",
+				"prod": "https://raylinks.atexgrp.com/",
+				"local": ""
+			},
+			{
+				"label": "Rey Links",
+				"prod": "https://reylinks.atexgrp.com",
+				"local": ""
+			},
+			{
+				"label": "Dana Links",
+				"prod": "http://dana.mar-ston.org/",
+				"local": ""
+			},
+			{
+				"label": "Tatum Links",
+				"prod": "https://tmlinks.atexgrp.com/",
+				"local": ""
+			}
+		]
+	}
+]
